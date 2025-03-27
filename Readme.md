@@ -1,34 +1,70 @@
-## Node.js의 활용
-- 웹 서버    
--> REST API, GraphQL API 개발  
-- 실시간 애플리케이션  
-->채팅, 실시간 알림, 스트리밍   
-- 서버리스 환경   
-->AWS Lambda 같은 Faas(Function as a Service)
+# Getting Started with Create React App
 
-## Node.js 인기 이유
-- 빠른 성능 : V8 엔진 기반 + 비동기 논 블로킹 방식으로 고성능 처리 가능   
-- JavaScript 풀스택 개발 : 프론트엔드와 백엔드를 같은 언어(JavaScript) 로 개발 가능   
-- 활발한 생태계 : npm을 통해 다양한 패키지 사용이 가능   
-- 실시간 애플리케이션에 강함 : WebSocket, Socket.io 지원
-- 마이크로 서비스 및 서버리스 환경과의 조화로운 연동
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Node.js 는 앞으로도 계속 발전할까?
-- Node.js의 창시자가 만든 Deno가 경쟁자로 떠오르고 있지만, Node.js의 생태계가 훨씬 크고 안정적임
-- ES 모듈로의 전환 진행 중
-- AWS, Azure, GCP에서 Node.js 지원 강화
+## Available Scripts
 
-## Node.js 의 장단점   
-### 장점
-- 비동기 논 블로킹 I/O로 높은 성능 제공   
-- JavaScript 풀스택 개발이 가능하여 생산성이 향상됨   
-- npm의 방대한 생태계를 활용 가능   
-- 경량 서버 개발에 적합 (Express.js 등)   
-- 실시간 데이터 처리(WebSocket)가 강력함
-### 단점
-- CPU 집약적인 작업에 부적합   
-> 싱글 스레드 기반이라 멀티스레딩 성능이 부족   
-- 콜백 지옥(Callback Hell) 문제
-> 해결책으로 async/await과 Promise 사용
-- 보안 취약점
-> npm 패키지의 보안 문제가 자주 발생
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
