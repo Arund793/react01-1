@@ -38,5 +38,12 @@
 }
 
 .wrapper {
-  text-align: center;
+  width: 25%;       /* wrapper(container) 영역의 width를 30%로 설정 */
+  margin: auto;     /* wrapper(container) 영역을 브라우저에서 가운데 정렬하기 위해 auto */
+  text-align: center; /* inline-block된 div들을 텍스트처럼 center로 정렬 */
+}
+
+.wrapper > div {
+  width: 50%;
+  float: left;
 }
