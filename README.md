@@ -5,78 +5,43 @@
 # React 수업 내용
 
 ### 4월 17일 (7주차)(0403브랜치)
-- state 끌어올리기 - 개요
-    - 처음에는 Square마다 로컬 state가 있어서 오직 왼쪽 위 칸만 반응했음.
-    - handleClick이 항상 index 0만 처리하도록 작성되어 있었음.
-    - 클릭된 칸의 index를 상위(Board) 컴포넌트로 끌어올려 처리해야 함.
+- state 끌어올리기: 클릭한 칸의 index를 Game에서 관리
 
-- 인덱스 기반으로 handleClick 함수 재정의
-    - handleClick(i)로 index를 인자로 받아 클릭된 칸에 따라 값 업데이트
-```
+- handleClick(i):
 const nextSquares = squares.slice();
 nextSquares[i] = xIsNext ? "X" : "O";
 setSquares(nextSquares);
-```
 
-- 콜백 함수 전달 방식의 실수
-    - onSquareClick={handleClick(i)} 형태는 즉시 실행되어 오류 발생
-    - 화살표 함수로 감싸서 함수 자체를 넘겨야 함
-```
+- onSquareClick:
 onSquareClick={() => handleClick(i)}
-```
 
-- 턴 관리와 불변성
-    - xIsNext라는 state를 두어 다음 차례를 결정
-```
+- 턴 관리:
 const [xIsNext, setXIsNext] = useState(true);
-...
 setXIsNext(!xIsNext);
-```
 
-- 승자 판단 및 클릭 차단
-    - 클릭 시 calculateWinner(squares)로 승자 확인
-    - 이미 값이 있거나 승자가 있으면 클릭 무시
-```
+- 클릭/승자 차단:
 if (squares[i] || calculateWinner(squares)) return;
-```
 
-- 상태 메시지 갱신
-    - 승자 유무에 따라 status 메시지 설정
-```
-const winner = calculateWinner(squares);
-const status = winner
-  ? `Winner: ${winner}`
+- 상태 메시지:
+const status = calculateWinner(squares)
+  ? `Winner: ${calculateWinner(squares)}`
   : `Next player: ${xIsNext ? "X" : "O"}`;
-```
 
-- 히스토리 배열로 이전 상태 저장
-    - 매 클릭마다 slice()로 복사한 배열을 history에 추가
-```
+- 히스토리 저장:
 const [history, setHistory] = useState([Array(9).fill(null)]);
-```
 
-- Game 컴포넌트에서 전체 state 관리
-    - Board가 아닌 Game이 최상위 상태 관리
-    - Game에서 squares와 handleClick을 Board에 props로 전달
-```
+- Game 컴포넌트:
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [xIsNext, setXIsNext] = useState(true);
-  const currentSquares = history[history.length - 1];
+  const current = history[history.length - 1];
 
   const handleClick = (i) => {
-    // 앞서 정의한 클릭 로직
+    // 클릭 로직
   };
 
   return (
-    <div className="game">
-      <div className="game-board">
-        <Board squares={currentSquares} onSquareClick={handleClick} />
-      </div>
-      <div className="game-info">
-        <ol>{/* 히스토리 버튼 렌더링 */}</ol>
-      </div>
-    </div>
+    <Board squares={current} onSquareClick={handleClick} />
   );
 }
 ```
