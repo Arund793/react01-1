@@ -1,11 +1,11 @@
 import './App.css';
-import Board from "./Board";
+import Game from "./Game";  // ✅ 이것만 필요!
 
 export default function App() {
     return (
         <div>
             <h1>Tic Tac Toe</h1>
-            <Board />
+            <Game />
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function Square(value, onSquareClick) {
+export default function Square({value, onSquareClick}) {
 
     //function handleClick() {
     //    setValue("x");
@@ -9,7 +9,7 @@ export default function Square(value, onSquareClick) {
     return (
         <div>
             <button
-                className="square" = {onSquareClick}
+                className="square" onClick = {onSquareClick}
                 //onClick={handleClick}
             >
                 {value}
