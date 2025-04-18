@@ -7,13 +7,13 @@ export default function Square({value, onSquareClick}) {
     //}
 
     return (
-        <div>
+        <>
             <button
                 className="square" onClick = {onSquareClick}
                 //onClick={handleClick}
             >
                 {value}
             </button>
-        </div>
+        </>
     );
 }
