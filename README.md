@@ -4,6 +4,37 @@
 
 # React 수업 내용
 
+### 5월 08일 (0508ch3 브랜치)
+
+
+```
+
+
+- 컴포넌트 구조
+  - FilterableProductTable: 루트 컴포넌트
+  - SearchBar: 검색어, 체크박스 입력
+  - ProductTable: 상품 목록 출력
+  - ProductCategoryRow: 카테고리 헤더
+  - ProductRow: 개별 상품 행
+
+- 정적 UI
+  - props로 데이터 전달
+  - JSX만 사용 (state 없음)
+  - 단방향 데이터 흐름 유지
+
+- state로 관리할 항목
+  - 검색어
+  - 체크박스 상태
+  - 원본 데이터
+  - 필터링 결과
+
+- state가 아닌 조건
+  - 변하지 않음
+  - props로 전달됨
+  - 계산 가능함
+
+```
+
 ### 4월 18일 (9주차 보강)(0403브랜치)
 - 과거 이동을 위한 map() 사용
     - history.map()으로 각 게임 상태를 버튼으로 렌더링.
