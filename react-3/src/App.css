@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem; /* 위아래 간격 */
+}
