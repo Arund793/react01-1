@@ -6,6 +6,69 @@
 
 ---
 
+# 12주차(2025년 5월 22일)(0508ch3 브랜치)
+```
+
+
+---
+
+## ✅ React 도입 방식
+
+- **점진적 적용 가능**
+  - 기존 HTML에 React만 추가 가능
+  - 복잡한 SPA도 구축 가능
+
+---
+
+## 1️⃣ 새로운 React 앱 만들기
+
+### 프레임워크 기반 시작 (추천)
+- **Next.js**
+  - Vercel에서 관리
+  - Node.js 기반 서버 or 서버 없는 라우팅 모두 가능
+- **React Router (v7) + Vite**
+  - Web API와 유연한 연동 가능
+
+### 모바일 앱 개발
+- **Expo (React Native 기반)**
+  - Android / iOS 지원
+  - 무료 배포 가능
+
+### 풀스택 프레임워크 예시
+- **RedwoodJS**
+- **TanStack Start**
+
+---
+
+## 2️⃣ 기존 프로젝트에 React 추가
+
+- 필요한 기능만 직접 구성 가능
+- **라우팅, 데이터 패칭, 빌드도구 등 직접 설정**
+
+### 자체 구성 도구 예시
+- **Vite**
+- **Parcel**
+- **Rspack**
+
+---
+
+## 3️⃣ 성능 개선 관련
+
+### 코드 분할
+- `React.lazy()` 사용 가능
+- 초기 로딩 시 **데이터 + 코드 Waterfall 문제** 발생
+
+### SPA의 성능 문제
+- HTML 하나로 동작하므로 초기 로딩이 느릴 수 있음
+- 해결 방법:
+  - **SSG**: Static Site Generation
+  - **SSR**: Server Side Rendering
+  - **RSC**: React Server Components
+
+  > RSC는 서버에서 DB 접근 등 가능
+```
+---
+
 ### 📆 5월 15일 (0508ch3 브랜치)
 ```
 - 🔧 컴포넌트 계층 분리
